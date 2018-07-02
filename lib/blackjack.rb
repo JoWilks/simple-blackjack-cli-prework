@@ -58,16 +58,15 @@ end
 # get every test to pass before coding runner below #
 #####################################################
 
+
 def runner
   # code runner here
   welcome
   current_total=initial_round
-  display_card_total(current_total)
   until current_total>21
-    current_total= current_total + hit?(current_total)
+    current_total = hit?(current_total)
     display_card_total(current_total)
   end
-    display_card_total(current_total)
-    end_game
+    end_game(current_total)
 end
     
